@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de trabajo - Dejar datos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-a" href="index.html">Inicio</a>
+            <a class="navbar-brand ml-auto" href="php/admin/loginAdmin.php"><button class="btn btn-light">Admin login</button></a>
+        </div>
+      </nav>
+    
+    <div class="container mt-5">
+        <h1>Formulario de inscripción para alumnos</h1>
+        <p>Por favor, indique sus datos personales para poder ser contactado por las empresas</p>
+        <div class="alert" id="messages"></div>
+       <form id="alumn-form">
+        <hr />
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Nombre" id="alumn-name" name="alumn-name" required />               
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="surname">Apellido:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Apellido" id="alumn-surname" name="alumn-surname" required />               
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            
+            <div class="row">
+                <div class="col-5">
+                    <div class="form-group">
+                        <label for="alumn-born">Fecha de nacimiento</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="date" class="form-control" placeholder="Nombre" id="alumn-born" name="alumn-born" required />               
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="document-type">Tipo de documento</label>
+                    <select class="custom-select" id="doc-type" name="docu-type" required>
+                        <option selected>DNI</option>
+                        <option>Pasaporte</option>
+                        <option>Carnet de extranjería</option>
+                    </select> 
+                </div>
+                <div class="col-5">
+                    <div class="form-group">
+                        <label for="doc-number">Documento</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"><i class="fas fa-mobile-alt"></i></div>
+                            </div>
+                            <input type="number" class="form-control" id="doc-number" name="doc-number" placeholder="Indique su número de documento" required />               
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="alumn-phone" name="alumn-phone" placeholder="Teléfono" required />               
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="alumn-email">Email:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                    </div>
+                    <input type="email" class="form-control" id="alumn-email" name="alumn-email" placeholder="su@email" required />               
+                </div>
+            </div>
+            <!-- carrera -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="alumn-career">Carrera</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Carrera" id="alumn-career" name="alumn-career" required />   
+                            </div>
+                        </div>
+                    <div class="col-2">
+                        <label for="career-year">Año</label>
+                        <select class="custom-select" id="career-year" name="career-year" required>
+                            <option selected disabled value="">Seleccione</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>   
+                        </select>       
+                    </div>
+                    </div>
+            </div>       
+            <!-- experiencia -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="alumn-work-exp">Experiencia laboral</label>
+                        <textarea placeholder="Cuéntenos sobre su experiencia laboral" id="alumn-work-exp" name="alumn-work-exp" class="form-control" required></textarea>
+                    </div>
+                </div>
+            </div>
+    
+            <hr />
+            <!-- submit -->
+            <button type="submit" id="send" name="send" class="btn btn-dark">Enviar</button>
+            <div id="respuesta">
+
+            </div>
+        </form>
+    </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="js/registrarAlumnos.js"></script>
+</body>
+</html>
